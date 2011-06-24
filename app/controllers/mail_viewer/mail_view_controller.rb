@@ -7,8 +7,9 @@ module MailViewer
 		end
 		
 		def show
-			@call = ActionMailer::Base.all_calls[params[:index]]
-			render :html => @call[:call].call, :layout=>false if @call
+			@call = ActionMailer::Base.all_calls[params[:index].to_i]
+			render :inline => @call[:call].call.body.raw_source, :layout=>false if @call
+
 		end
 		
 	end
