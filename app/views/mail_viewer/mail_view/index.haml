@@ -1,4 +1,4 @@
 %ul
 	- @calls.each_with_index do |c,i|
 		%li
-			= link_to c.date, show_mail_path(:index=>i)
+			= link_to c.date, mail_viewer_show_mail_path(:index=>i)
