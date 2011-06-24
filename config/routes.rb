@@ -1,4 +1,6 @@
 Rails.application.routes.draw do |map|
-	get "/mail_view", :to => "mail_view#index"
-	get "/mail_view/:index", :to => "mail_view#show", :as=>"show_mail"
+	namespace :mail_viewer do
+		get "/", :to => "mail_view#index"
+		get "/:index", :to => "mail_view#show", :as=>"show_mail"
+	end
 end
