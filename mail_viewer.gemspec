@@ -1,4 +1,4 @@
-Gem::Specification do |gem|
+Gem::Specification.new do |gem|
 	gem.name     = "mail_viewer"
 	gem.version  = "0.0.1"
 	gem.summary  = "in Rails, view ActionMailer based emails in the browser"
